@@ -11,6 +11,7 @@ export function createDb(connectionString?: string): Kysely<Database> {
   const pool = new pg.Pool({
     connectionString: url,
     ssl: { rejectUnauthorized: false },
+    max: 5,
   });
 
   return new Kysely<Database>({
