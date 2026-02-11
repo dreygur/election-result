@@ -1,0 +1,7 @@
+{
+  "buildCommand": "pnpm --filter @election/web build",
+  "outputDirectory": "packages/web/.next",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "ignoreCommand": "npx turbo-ignore --fallback=HEAD~1"
+}
