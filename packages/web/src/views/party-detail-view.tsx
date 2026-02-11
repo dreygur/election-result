@@ -18,7 +18,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber, imageUrl } from "@/lib/utils";
 import { getPartyColor } from "@/lib/party-colors";
 import { getAllianceForParty } from "@/lib/alliances";
 import type { PaginationInfo } from "@/types/pagination";
@@ -77,7 +77,7 @@ export function PartyDetailView({
           <div className="mt-2 flex items-center gap-4">
             {(party.symbol_url || party.logo_url) && (
               <Image
-                src={(party.symbol_url || party.logo_url)!}
+                src={imageUrl((party.symbol_url || party.logo_url)!)}
                 alt={party.name_en || party.name_bn}
                 width={64}
                 height={64}
@@ -167,7 +167,7 @@ export function PartyDetailView({
                           <div className="flex items-center gap-2">
                             {c.photo_url && (
                               <Image
-                                src={c.photo_url}
+                                src={imageUrl(c.photo_url)}
                                 alt={c.name_bn}
                                 width={32}
                                 height={32}
@@ -211,7 +211,7 @@ export function PartyDetailView({
                         <div className="flex items-center gap-2">
                           {c.photo_url && (
                             <Image
-                              src={c.photo_url}
+                              src={imageUrl(c.photo_url)}
                               alt={c.name_bn}
                               width={28}
                               height={28}

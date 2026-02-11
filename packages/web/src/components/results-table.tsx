@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { PartyBadge } from "@/components/party-badge";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber, imageUrl } from "@/lib/utils";
 import { getPartyColor } from "@/lib/party-colors";
 import { EmptyState } from "@/components/empty-state";
 
@@ -67,7 +67,7 @@ export function ResultsTable({ candidates }: { candidates: CandidateRow[] }) {
                     <div className="flex items-center gap-3">
                       {c.photo_url && (
                         <Image
-                          src={c.photo_url}
+                          src={imageUrl(c.photo_url)}
                           alt={c.name_bn}
                           width={32}
                           height={32}
@@ -83,7 +83,7 @@ export function ResultsTable({ candidates }: { candidates: CandidateRow[] }) {
                     <div className="flex items-center gap-2">
                       {c.symbol_url && (
                         <Image
-                          src={c.symbol_url}
+                          src={imageUrl(c.symbol_url)}
                           alt=""
                           width={20}
                           height={20}
@@ -137,7 +137,7 @@ export function ResultsTable({ candidates }: { candidates: CandidateRow[] }) {
                   <div className="flex items-center gap-2">
                     {c.photo_url && (
                       <Image
-                        src={c.photo_url}
+                        src={imageUrl(c.photo_url)}
                         alt={c.name_bn}
                         width={28}
                         height={28}

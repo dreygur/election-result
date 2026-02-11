@@ -15,7 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber, imageUrl } from "@/lib/utils";
 import { getPartyColor } from "@/lib/party-colors";
 import type { PaginationInfo } from "@/types/pagination";
 
@@ -112,7 +112,7 @@ export function PartiesView({
                           >
                             {(p.symbol_url || p.logo_url) && (
                               <Image
-                                src={(p.symbol_url || p.logo_url)!}
+                                src={imageUrl((p.symbol_url || p.logo_url)!)}
                                 alt=""
                                 width={20}
                                 height={20}
@@ -169,7 +169,7 @@ export function PartiesView({
                         <div className="flex items-center gap-2">
                           {p.logo_url && (
                             <Image
-                              src={p.logo_url}
+                              src={imageUrl(p.logo_url)}
                               alt=""
                               width={24}
                               height={24}

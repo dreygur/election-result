@@ -16,7 +16,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { formatNumber, formatPercent } from "@/lib/utils";
+import { formatNumber, formatPercent, imageUrl } from "@/lib/utils";
 import { getPartyColor } from "@/lib/party-colors";
 
 type CandidateDetail = {
@@ -76,7 +76,7 @@ export function CandidateView({
           <div className="mt-4 flex items-start gap-6">
             {c.photo_url && (
               <Image
-                src={c.photo_url}
+                src={imageUrl(c.photo_url)}
                 alt={c.name_bn}
                 width={160}
                 height={200}
@@ -93,7 +93,7 @@ export function CandidateView({
               <div className="flex items-center gap-3">
                 {c.symbol_url && (
                   <Image
-                    src={c.symbol_url}
+                    src={imageUrl(c.symbol_url)}
                     alt={c.symbol || ""}
                     width={28}
                     height={28}
