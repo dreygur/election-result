@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
-    "dotenv": "^16.6.1"
+    "dotenv": "^16.6.1",
+    "next": "^15.1.0"
   }
 }
