@@ -2,7 +2,7 @@
 
 Next.js web app displaying results of the Bangladesh 13th National Parliament Election.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdreygur%2Felection-result&env=DATABASE_URL&envDescription=PostgreSQL%20connection%20string%20(Aiven%20or%20any%20provider)&envLink=https%3A%2F%2Fgithub.com%2Fdreygur%2Felection-result%23environment-variables&project-name=bd-election-results&root-directory=packages/web)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdreygur%2Felection-result&env=DATABASE_URL,NEXT_PUBLIC_IMAGE_BASE,NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_GA_ID&envDescription=Database%20URL%2C%20image%20base%2C%20site%20URL%2C%20and%20Google%20Analytics%20ID&envLink=https%3A%2F%2Fgithub.com%2Fdreygur%2Felection-result%23environment-variables&project-name=bd-election-results&root-directory=packages/web)
 
 
 ## Stack
@@ -45,7 +45,10 @@ pnpm dev
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `DATABASE_URL` | Yes | PostgreSQL connection string |
+| `NEXT_PUBLIC_IMAGE_BASE` | No | Base URL for images (empty for local) |
 | `NEXT_PUBLIC_LIVE_REFRESH_INTERVAL` | No | Auto-refresh interval in seconds (0 = disabled) |
+| `NEXT_PUBLIC_SITE_URL` | No | Public site URL for sitemap and OG images |
+| `NEXT_PUBLIC_GA_ID` | No | Google Analytics measurement ID |
 
 ## Build
 
