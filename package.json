@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "db:migrate": "pnpm --filter @election/db migrate",
+    "db:seed": "pnpm --filter @election/db seed",
+    "scrape": "pnpm --filter @election/scraper start",
+    "dev": "pnpm --filter @election/web dev",
+    "build": "pnpm --filter @election/web build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1"
+  }
+}

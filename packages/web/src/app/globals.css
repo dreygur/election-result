@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  /* Bangladesh flag palette: Green #006A4E, Red #F42A41, Gold #D4A017 */
+  --color-background: oklch(0.985 0.002 155);
+  --color-foreground: oklch(0.14 0.02 160);
+  --color-muted: oklch(0.955 0.008 155);
+  --color-muted-foreground: oklch(0.45 0.015 160);
+  --color-border: oklch(0.905 0.01 155);
+  --color-input: oklch(0.92 0.008 155);
+  --color-ring: oklch(0.42 0.12 165);
+  --color-primary: oklch(0.42 0.12 165);
+  --color-primary-foreground: oklch(1 0 0);
+  --color-secondary: oklch(0.955 0.015 155);
+  --color-secondary-foreground: oklch(0.22 0.02 160);
+  --color-accent: oklch(0.94 0.012 155);
+  --color-accent-foreground: oklch(0.18 0.02 160);
+  --color-destructive: oklch(0.55 0.24 25);
+  --color-destructive-foreground: oklch(1 0 0);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.14 0.02 160);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.14 0.02 160);
+  --color-success: oklch(0.50 0.14 160);
+  --color-success-foreground: oklch(1 0 0);
+  --color-warning: oklch(0.72 0.17 85);
+  --color-warning-foreground: oklch(0.18 0.04 85);
+  --radius: 0.625rem;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
