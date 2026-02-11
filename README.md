@@ -27,6 +27,7 @@ pnpm --filter web dev
 | `NEXT_PUBLIC_IMAGE_BASE` | Base URL for images (empty for local, set to GitHub raw URL on Vercel) |
 | `NEXT_PUBLIC_LIVE_REFRESH_INTERVAL` | Auto-refresh interval in seconds (0 to disable) |
 | `NEXT_PUBLIC_SITE_URL` | Public site URL for sitemap and OG images |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics measurement ID (e.g. `G-XXXXXXXXXX`) |
 
 ## Database
 
