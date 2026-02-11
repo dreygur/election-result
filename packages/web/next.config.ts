@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "raw.githubusercontent.com" },
     ],
   },
+  experimental: {
+    // Limit build workers to avoid exhausting DB connections on Aiven free tier
+    cpus: 1,
+  },
 };
 
 export default nextConfig;
