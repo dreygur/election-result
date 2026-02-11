@@ -11,7 +11,10 @@ export async function generateMetadata({
   const { id } = await params;
   const candidate = await getCandidateById(Number(id));
   if (!candidate) return {};
-  return { title: candidate.name_bn };
+  return {
+    title: candidate.name_bn,
+    description: `${candidate.name_bn} — candidate in ${candidate.constituencyName}.`,
+  };
 }
 
 export default async function CandidatePage({

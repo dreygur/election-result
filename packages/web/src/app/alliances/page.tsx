@@ -3,7 +3,11 @@ import { getAllianceResults } from "@/lib/queries/alliances";
 import { getOverallStats } from "@/lib/queries/stats";
 import { AlliancesView } from "@/views/alliances-view";
 
-export const metadata: Metadata = { title: "Alliances" };
+export const metadata: Metadata = {
+  title: "Alliances",
+  description:
+    "Political alliances in the 13th Bangladesh National Parliament Election — coalition seats, votes, and member parties.",
+};
 
 export default async function AlliancesPage() {
   const [alliances, stats] = await Promise.all([

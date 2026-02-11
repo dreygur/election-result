@@ -3,7 +3,11 @@ import { getConstituencies } from "@/lib/queries/constituencies";
 import { getDistricts } from "@/lib/queries/districts";
 import { ConstituenciesView } from "@/views/constituencies-view";
 
-export const metadata: Metadata = { title: "Constituencies" };
+export const metadata: Metadata = {
+  title: "Constituencies",
+  description:
+    "Browse all 300 constituencies of the 13th Bangladesh National Parliament Election — filter by district or winning party.",
+};
 
 export default async function ConstituenciesPage({
   searchParams,

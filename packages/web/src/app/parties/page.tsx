@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { getParties } from "@/lib/queries/parties";
 import { PartiesView } from "@/views/parties-view";
 
-export const metadata: Metadata = { title: "Parties" };
+export const metadata: Metadata = {
+  title: "Parties",
+  description:
+    "All political parties in the 13th Bangladesh National Parliament Election — seats won, total votes, and candidates.",
+};
 
 export default async function PartiesPage({
   searchParams,

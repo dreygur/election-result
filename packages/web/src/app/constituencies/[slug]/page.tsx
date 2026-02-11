@@ -21,7 +21,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const c = await getConstituencyBySlug(slug);
   if (!c) return {};
-  return { title: c.name_en };
+  return {
+    title: c.name_en,
+    description: `Results for ${c.name_en} — candidates, votes, and polling centers.`,
+  };
 }
 
 export default async function ConstituencyPage({

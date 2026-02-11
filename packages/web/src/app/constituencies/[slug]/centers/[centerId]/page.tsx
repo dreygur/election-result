@@ -11,7 +11,10 @@ export async function generateMetadata({
   const { centerId } = await params;
   const center = await getCenterById(Number(centerId));
   if (!center) return {};
-  return { title: `Center #${center.center_number} — ${center.constituencyName}` };
+  return {
+    title: `Center #${center.center_number} — ${center.constituencyName}`,
+    description: `Polling center #${center.center_number} results in ${center.constituencyName}.`,
+  };
 }
 
 export default async function CenterPage({

@@ -11,7 +11,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const party = await getPartyBySlug(slug);
   if (!party) return {};
-  return { title: party.name_en || party.name_bn };
+  const name = party.name_en || party.name_bn;
+  return {
+    title: name,
+    description: `${name} — seats, votes, and candidates in the 13th Bangladesh Parliament Election.`,
+  };
 }
 
 export default async function PartyPage({

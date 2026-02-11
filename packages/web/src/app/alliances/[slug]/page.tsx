@@ -16,7 +16,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const alliance = ALLIANCES.find((a) => a.slug === slug);
   if (!alliance) return {};
-  return { title: alliance.name };
+  return {
+    title: alliance.name,
+    description: `${alliance.name} — member parties, seats, and constituencies in the 13th Parliament Election.`,
+  };
 }
 
 export default async function AlliancePage({
