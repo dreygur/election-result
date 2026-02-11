@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Vote, Menu, X } from "lucide-react";
+import { Vote, Menu, X, Star, Github } from "lucide-react";
 import { LiveRefresh } from "@/components/live-refresh";
 import { SearchDialog } from "@/components/search-dialog";
 
@@ -50,6 +50,16 @@ export function Header() {
                 </Link>
               ))}
             </nav>
+            <a
+              href="https://github.com/dreygur/election-result"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-8 items-center gap-1.5 rounded-md border border-border/60 bg-background px-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+            >
+              <Github className="h-3.5 w-3.5" />
+              <Star className="h-3 w-3" />
+              Star
+            </a>
             <SearchDialog />
             <LiveRefresh />
             {/* Mobile hamburger */}
