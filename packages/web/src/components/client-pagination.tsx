@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, type ReactNode } from "react";
+import { useState, useCallback, useEffect, type ReactNode } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { PaginationInfo } from "@/types/pagination";
 
@@ -36,6 +36,11 @@ export function ClientPagination<T>({
   const [data, setData] = useState(initialData);
   const [pagination, setPagination] = useState(initialPagination);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setData(initialData);
+    setPagination(initialPagination);
+  }, [initialData, initialPagination]);
 
   const page = pagination?.page ?? 1;
   const totalPages = pagination?.totalPages ?? 1;
