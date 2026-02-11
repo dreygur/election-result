@@ -3,7 +3,9 @@
   "scripts": {
     "db:migrate": "pnpm --filter @election/db migrate",
     "db:seed": "pnpm --filter @election/db seed",
-    "scrape": "pnpm --filter @election/scraper start",
+    "scrape:setup": "pnpm --filter @election/scraper scrape:setup",
+    "scrape:results": "pnpm --filter @election/scraper scrape:results",
+    "scrape:cleanup": "pnpm --filter @election/scraper scrape:cleanup",
     "dev": "pnpm --filter @election/web dev",
     "build": "pnpm --filter @election/web build"
   },
